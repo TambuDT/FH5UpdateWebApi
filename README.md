@@ -26,7 +26,7 @@ Installazione
 
 3.  Avvio del Server:
 
-    `node server.js`
+    `node index.js`
 
 Utilizzo
 --------
