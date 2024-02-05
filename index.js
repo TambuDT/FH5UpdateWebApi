@@ -30,7 +30,7 @@ async function check_online_version(new_version, res) {
                         const get_link = await el2.getProperty('href');
                         const upd_link = await get_link.jsonValue();
                         res.status(200).json({ upd_link });
-                        console.log(upd_link);
+                        //console.log(upd_link);
                     }
 
                     count++;
@@ -39,6 +39,9 @@ async function check_online_version(new_version, res) {
                 }
             }
         }
+        else(
+            res.status(200).json({ "La versione che cerchi non è ancora disponibile"});
+        )
 
         await browser.close(); // Chiudi il browser Puppeteer
 
@@ -49,10 +52,10 @@ async function check_online_version(new_version, res) {
 
 function check(installed_version, new_version, res) {
     if (installed_version != new_version) {
-        console.log("");
+        //console.log("");
         check_online_version(new_version, res);
     } else {
-        console.log("Hai già la versione più recente del gioco");
+        //console.log("Hai già la versione più recente del gioco");
         res.status(200).json({ message: "Hai già la versione più recente del gioco" });
     }
 }
@@ -79,7 +82,7 @@ app.get('/checkupdate', async (req, res) => {
         var current_released_version = await scrapeUpdate(last_div, release_version_link);
 
         if (current_released_version == "") {
-            console.log("NON CI SONO AGGIORNAMENTI");
+            //console.log("NON CI SONO AGGIORNAMENTI");
             res.status(200).json({ message: "Non ci sono aggiornamenti" });
         } else {
             console.log("Update Version: " + current_released_version);
