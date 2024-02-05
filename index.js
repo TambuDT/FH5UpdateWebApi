@@ -17,7 +17,7 @@ async function check_online_version(new_version, res) {
         const title = await get_title.jsonValue();
 
         if (title.includes(new_version)) {
-            var count = 1;
+            var count = 1; //variabile per scorrere tra i div
 
             while (1) {
                 try {
