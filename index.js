@@ -85,7 +85,7 @@ app.get('/checkupdate', async (req, res) => {
             //console.log("NON CI SONO AGGIORNAMENTI");
             res.status(200).json({ message: "Non ci sono aggiornamenti" });
         } else {
-            console.log("Update Version: " + current_released_version);
+            //console.log("Update Version: " + current_released_version);
             check(current_game_version, current_released_version, res);
         }
     } catch (error) {
