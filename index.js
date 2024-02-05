@@ -39,9 +39,6 @@ async function check_online_version(new_version, res) {
                 }
             }
         }
-        else(
-            res.status(200).json({ "La versione che cerchi non è ancora disponibile"});
-        )
 
         await browser.close(); // Chiudi il browser Puppeteer
 
