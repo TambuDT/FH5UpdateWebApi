@@ -35,7 +35,7 @@ Effettua una richiesta HTTP GET a `http://localhost:3000/checkupdate` con i para
 
 Esempio:
 
-`curl http://localhost:3000/checkupdate?last_div=93&current_game_version=v1.0.0.0`
+`http://localhost:3000/checkupdate?last_div=93&current_game_version=v1.0.0.0`
 
 Risposta
 --------
